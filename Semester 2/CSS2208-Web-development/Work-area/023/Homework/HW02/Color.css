@@ -1,0 +1,27 @@
+h1{
+    color:rgb(125, 255, 0);
+}
+center p{
+    color: rgb(255, 0, 0);
+}
+a{
+    color:rgb(255, 255, 0);
+}
+ol{
+    color:rgb(255, 4, 255);
+}
+fieldset p {
+    color:rgb(153, 55, 25);
+  }
+fieldset label {
+    color:rgb(0, 255, 255);
+  }
+option{
+    color: rgb(25, 25, 100);
+}
+#s1{
+    color: rgb(255, 0, 0);
+}
+#b1{
+    border-color: rgb(255, 0, 0);
+}

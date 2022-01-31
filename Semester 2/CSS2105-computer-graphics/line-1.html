@@ -1,0 +1,29 @@
+<html>
+    <body>
+
+        <canvas id = "myCanvas" width="800" height="600" style="border: 3px solid #FFFFFF">
+        </canvas>
+
+        <script>
+            var c=document.getElementById("myCanvas");
+            var ctx=c.getContext("2d");
+
+            ctx.beginPath();
+            ctx.moveTo(100,300);
+            ctx.lineTo(600,300);
+            ctx.lineWidth = "5";
+            ctx.strokeStyle = "rgb(0,0,255)";
+            ctx.stroke();
+            ctx.closePath();
+
+            ctx.beginPath();
+            ctx.moveTo(350,50);
+            ctx.lineTo(350,550);
+            ctx.lineWidth = "5";
+            ctx.strokeStyle = "#FF0000";
+            ctx.stroke();
+            ctx.closePath();
+
+        </script>
+    </body>
+</html>

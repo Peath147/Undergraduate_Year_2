@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ข้อมูลส่วนตัว</h1>
+ <fieldset>
+  <legend>ข้อมูลส่วนตัว</legend>
+    <p>
+      <label>ชื่อ: </label>
+      <input type="text" name="firstname" />
+    </p>
+     <p>
+       <label>นามสกุล: </label>
+       <input type="text" name="lastname" />
+     </p>
+     <p>
+      <label>อีเมล: </label>
+      <input type="email" name="mail" />
+    </p>
+    <p>
+        <label for="lastname">เพศ</label>
+        <input type="radio" name="gender">เพศชาย
+        <input type="radio" name="gender">เพศหญิง
+    </p>
+    <p>
+        <label>รายได้:</label>
+        <select name="money">
+            <option>ไม่มีรายได้</option>
+            <option>15000 บาท</option>
+            <option>มากกว่า15000 บาท</option>
+        </select>
+    </p>
+    
+    <input type="submit" value="สมัครสมาชิก"/>
+</fieldset>
+
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<html>
+    <script async src='/cdn-cgi/bm/cv/669835187/api.js'></script><body>
+        <canvas id = "myCanvas" width="800" height="600" style="border: 3px solid #ffffff;">
+        </canvas>
+        <script>
+            var c=document.getElementById("myCanvas");
+            var ctx=c.getContext("2d");
+
+
+            drawCircle(300,250,85,"0","blue","blue")
+            drawCircle(300,400,85,"0","blue","blue")
+            drawCircle(270,240,15,"0","black","black")
+            drawCircle(330,240,15,"0","black","black")
+            drawCircle(390,170,30,"30","black","white")
+            drawCircle(210,170,30,"30","black","white")
+            drawCircle(300,290,10,"20","black","white")
+            drawCircle(380,340,20,"0","black","black")
+            drawCircle(220,340,20,"0","black","black")
+            drawCircle(380,440,20,"0","black","black")
+            drawCircle(220,440,20,"0","black","black")
+            drawCircle(300,420,5,"5","black","black")
+             function drawCircle(x,y,radius,lineWidth,strokeStylecolor,color){
+
+                ctx.beginPath();
+                ctx.arc(x,y,radius,0,2*Math.PI,true);
+                ctx.lineWidth =lineWidth;
+                ctx.strokeStyle=strokeStylecolor;
+                ctx.stroke();
+                ctx.fillStyle = color;
+                ctx.fill();
+            }
+
+        </script>
+    <script type="text/javascript">(function(){window['__CF$cv$params']={r:'6d5bbffac9164b5e',m:'j5j5eetXfC3uHjWRhPk8x0T1H7KZDIjXg1hl_7wyEDk-1643556714-0-ARYq7cR/+S8jQzwWnpgIqmsblbrQX1S0+75wVy5gA3YRv+u6e9+lOch67RHa68FgzM/LMiVCnUG104YiDw0vmz1C0hy08nOPHELnXSdl57KrstLrbCeJ9xs1dH8ou4TZTNN6hwkWuXhMNZ8R03ZC6LGW/DqxngcGepf///8FmdIvXcjzErW2h2YPh9kUYu0EOl6cFx6SqX3Akc3SxHqVyvA=',s:[0xd5b1975e1b,0x2fd5e975d9],}})();</script></body>
+</html>

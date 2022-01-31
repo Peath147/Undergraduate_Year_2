@@ -1,0 +1,47 @@
+public void insert(AvlNode n) {
+        AvlNode y = null;
+        AvlNode temp = this.root;
+        while(temp != null) {
+            y = temp;
+            if(n.data < temp.data)
+                temp = temp.left;
+            else
+                temp = temp.right;
+        }
+        n.parent = y;
+        if(y == null) //newly added node is root
+            this.root = n;
+        else if(n.data < y.data)
+            y.left = n;
+        else
+            y.right = n;
+
+        AvlNode z = n;
+        while(y != null) {
+            y.height = 1 + max(height(y.left), height(y.right));
+            AvlNode x = y.parent;
+            if(balanceFactor(x) <= -2 || balanceFactor(x) >= 2) {//grandparent is unbalanced
+                if(y == x.left) {
+                    if(z == x.left.left) //case 1
+                        rightRotate(x);
+
+                    else if(z == x.left.right) {//case 3
+                        leftRotate(y);
+                        rightRotate(x);
+                    }
+                }
+                else if(y == x.right) {
+                    if(z == x.right.right) //case 2
+                        leftRotate(x);
+
+                    else if(z == x.right.left) {//case 4
+                        rightRotate(y);
+                        leftRotate(x);
+                    }
+                }
+                break;
+            }
+            y = y.parent;
+            z = z.parent;
+        }
+    }

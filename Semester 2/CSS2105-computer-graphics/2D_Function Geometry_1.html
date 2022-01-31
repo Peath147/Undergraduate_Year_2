@@ -1,0 +1,37 @@
+<html>
+    <script async src='/cdn-cgi/bm/cv/669835187/api.js'></script><body>
+        <canvas id = "myCanvas" width="800" height="600" style="border: 3px solid #ffffff;">
+        </canvas>
+        <script>
+            var c=document.getElementById("myCanvas");
+            var ctx=c.getContext("2d");
+            
+            // drawCircle(200,300,50,"red")
+            // drawCircle(200,200,50,"#FFFF00")
+            // drawCircle(200,400,50,"#FF5500")
+            Rect(100,100,200,200,5,"red")
+            Rect(303,100,200,200,5,"blue")
+            Rect(100,300,200,200,5,"yellow")
+            Rect(303,300,200,200,5,"cyan")
+            function drawCircle(x,y,radius,color){
+
+                ctx.beginPath();
+                ctx.arc(x,y,radius,0,2*Math.PI,true);
+                ctx.fillStyle = color;
+                ctx.fill();
+            }
+
+
+            function Rect(x,y,w,h,linewidth,color){
+            ctx.beginPath();
+            ctx.rect(x,y,w,h);
+            ctx.lineWidth = linewidth;
+            ctx.stroke();
+            ctx.fillStyle = color;
+            ctx.fill();
+            
+}
+
+        </script>
+    <script type="text/javascript">(function(){window['__CF$cv$params']={r:'6d5bc0139fe64b5e',m:'q_fD.QM51ZY0SaVrLhVibbQlrfE8cWM3hN17k7cN5RM-1643556718-0-ATAUlU6gUG2yNfKTyFiA5DRxNWlDgx9IsqJJ+nHIT6cuQr/zdvHLZhBgNhoDyNDscuoT10YIb8rprv/GHuLByNXvwTuVBiW3/1KmsSn3g3vNT922UDsBUbCTUcgCbgIt/LP+469Hv4MaZ11S0gA24FI+Zhk2YPZk1X6/2VqtkFrRn8nspeIEgRuAMzWiso8Z2IsCFdTOth+cIA8Ns5La7jA=',s:[0x8416f2a029,0x714eb78444],}})();</script></body>
+</html>

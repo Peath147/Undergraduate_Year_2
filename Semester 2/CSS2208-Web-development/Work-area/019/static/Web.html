@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="images\Web-Bootstrap\logo.png" height="100" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Promotions</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Support</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images\Web-Bootstrap\carousel_1.jpg" height="300" class="d-block w-100" alt="..." />
+      </div>
+      <div class="carousel-item">
+        <img src="images\Web-Bootstrap\carousel_2.jpg" height="300" class="d-block w-100" alt="..." />
+      </div>
+      <div class="carousel-item">
+        <img src="images\Web-Bootstrap\carousel_3.jpg" height="300" class="d-block w-100" alt="..." />
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <section id="val">
+    <div class="row row-cols-1 row-cols-md-3 g-4 mt-auto">
+      <div class="col">
+        <div class="card h-100">
+          <img src="images\Web-Bootstrap\card_1.jpg" height="350" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">ลิปสติก Heart ID Lipstick </h5>
+            <p class="card-text">
+              149 บาท
+            </p>
+          </div>
+          <div class="card-footer">
+            <a data-bs-toggle="modal" data-bs-target="#myModalH01">see more</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100">
+          <img src="images\Web-Bootstrap\card_2.jpg" height="350" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">ลิปสติก Super Lustrous Lipstick</h5>
+            <p class="card-text">
+              189 บาท
+            </p>
+          </div>
+          <div class="card-footer">
+            <a data-bs-toggle="modal" data-bs-target="#myModalH02">see more</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100">
+          <img src="images\Web-Bootstrap\card_3.jpg" height="350" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">ลิปสติก Wonder Glow Lip Oil</h5>
+            <p class="card-text">
+              139 บาท
+            </p>
+          </div>
+          <div class="card-footer">
+            <a data-bs-toggle="modal" data-bs-target="#myModalH03">see more</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100">
+          <img src="images\Web-Bootstrap\card_4.jpg" height="350" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">ลิปสติก Oh My Tint Splash
+            </h5>
+            <p class="card-text">
+              99 บาท
+            </p>
+          </div>
+          <div class="card-footer">
+            <a data-bs-toggle="modal" data-bs-target="#myModalH04">see more</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100">
+          <img src="images\Web-Bootstrap\card_5.jpg" height="350" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">ลิปสติก Me Myself and My Lipstick</h5>
+            <p class="card-text">
+              99 บาท
+            </p>
+          </div>
+          <div class="card-footer">
+            <a data-bs-toggle="modal" data-bs-target="#myModalH05">see more</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100">
+          <img src="images\Web-Bootstrap\card_6.jpg" height="350" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">ลิปสติก The Creamy Mattes
+            </h5>
+            <p class="card-text">
+              119 บาท
+            </p>
+          </div>
+          <div class="card-footer">
+            <a data-bs-toggle="modal" data-bs-target="#myModalH06">see more</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="modal fade" id="myModalH01">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">
+            แพ็กเกจสุดน่ารักพร้อมเนื้อลิปสติก 3 แบบ 3 สไตล์ให้เลือกใช้
+          </h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row row-cols-1 row-cols-sm-2 g-4 mt-auto">
+          </div>
+          นับว่าเป็นลิปสติกที่มีเนื้อสีให้เลือกหลากหลายตอบโจทย์การแต่งหน้าทุกลุคทุกสไตล์ โดยมีเนื้อ Sheer
+          ที่ให้ริมฝีปากแลดูแวววาวฉ่ำน้ำ เม็ดสีบางเบา สามารถทาซ้ำเพื่อเพิ่มความชัดของสีได้ตามต้องการ เนื้อ Creamy
+          นุ่มละมุน ทาง่าย ให้สีชัดเจน ติดทนกำลังดี และเนื้อ Matte ที่มีความเบาสบายปาก เม็ดสีแน่น กลบสีปากได้ดี 
+          อีกทั้งยังติดทนยาวนาน ถึงจะมีเนื้อลิปที่แตกต่างกัน แต่จุดเด่นของลิปสติกรุ่นนี้ก็คือ ไม่ทำให้ริมฝีปากแห้งแตก 
+          ลอกเป็นขุย หรือตกร่องปาก แม้แต่คนที่ปากแห้งก็สามารถทาให้ออกมาสวยได้ค่ะ
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">
+            cancel
+          </button>
+          <button class="btn btn-success">buy</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="myModalH02">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">
+            สีสดชัดเจน เนื้อนุ่มเนียนเกลี่ยง่าย ทิ้งความฉ่ำให้ปากดูชุ่มชื้น
+          </h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row row-cols-1 row-cols-sm-2 g-4 mt-auto">
+          </div>
+          ลิปสติกรุ่นยอดนิยมจากแบรนด์ดังที่ราคาอยู่ในหลักร้อยแต่คุณภาพจัดเต็มไม่แพ้ลิปสติกราคาแพง 
+          ด้วยเนื้อสัมผัสที่มีความเนียนละเอียดเป็นพิเศษ จึงให้สีสันที่สวยสดชัดเจน แถมยังมีให้เลือกกันมากมายถึง 35 เฉดสีเลยทีเดียว 
+          โดยให้ Finish Look แบบ Satin ที่มีความฉ่ำวาวเบา ๆ พร้อมบำรุงให้ปากดูชุ่มชื้น นอกจากนี้ ยังมีเนื้อนุ่มลื่นเกลี่ยง่ายเป็นจุดเด่นที่ทำให้หลายคนหลงรัก 
+          แต่บางคนก็รีวิวเอาไว้ว่าไม่ค่อยติดทนและต้องเติมซ้ำในระหว่างวันอยู่บ่อยครั้งค่ะ
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">
+            cancel
+          </button>
+          <button class="btn btn-success">buy</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="myModalH03">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">
+            เรียวปากชุ่มฉ่ำอวบอิ่มเป็นประกายแวววาว แต่ไม่เหนียวเหนอะหนะ
+          </h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row row-cols-1 row-cols-sm-2 g-4 mt-auto">
+          </div>
+          ลิปออยล์เนื้อบางเบาที่จะเนรมิตเรียวปากให้ดูฉ่ำวาวอิ่มน้ำอย่างเป็นธรรมชาติโดยไม่ทำให้รู้สึกเหนียวเหนอะหนะ 
+          พร้อมอุดมไปด้วย Vitamin E และสารสกัดจากดอกไม้ ซึ่งจะช่วยบำรุงริมฝีปากให้ชุ่มชื้นและเนียนนุ่ม รวมทั้งยังป้องกันริมฝีปากหมองคล้ำด้วย 
+          ในส่วนของสีก็มีให้เลือก 3 สี คือ สีชมพู สีส้ม และสีแดง โดยเม็ดสีจะค่อนข้างจาง ให้สีที่ดูระเรื่อ ๆ อย่างเป็นธรรมชาติ แต่ถ้าหากทาร่วมกับลิปสติกรุ่นอื่น 
+          แล้วตามด้วยลิปออยล์รุ่นนี้ทับอีกชั้น รับรองว่าจะได้ Finish Look แบบ Gloss ที่เป็นประกายสวยงามมาก ๆ เลยค่ะ 
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">
+            cancel
+          </button>
+          <button class="btn btn-success">buy</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="myModalH04">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">
+            อุดมสารบำรุงเพื่อริมฝีปากชุ่มชื้น ไม่ตกร่อง ไม่ทำให้ปากคล้ำ
+          </h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row row-cols-1 row-cols-sm-2 g-4 mt-auto">
+          </div>
+          อีกหนึ่งลิปสติกราคาย่อมเยาที่คุณภาพดีจนทำให้ใคร ๆ ต่างก็ติดใจ ด้วยคุณสมบัติของเนื้อลิปที่จะแตกตัวเป็นละอองน้ำเมื่อทาลงบนริมฝีปาก 
+          จึงให้สัมผัสที่นุ่มลื่น เบาสบาย พร้อมเติมความชุ่มชื้นให้เรียวปากอิ่มสวยยาวนาน ไม่แห้งแตกเป็นขุย และเนื้อลิปไม่ตกร่องปาก 
+          อีกทั้งยังมีส่วนผสมของ Vitamin E ซึ่งจะช่วยบำรุงให้ริมฝีปากเรียบเนียนขึ้น นอกจากนี้ ยังปราศจากแอลกอฮอล์ที่จะทำให้ปากคล้ำอีกด้วย 
+          อย่างไรก็ตาม ลิปจิ้มจุ่มรุ่นนี้ให้การติดทนปานกลาง แม้เม็ดสีจะชัดเจน กลบสีปากได้มิด แต่อาจมีหลุดติดแมสก์ออกมาบ้างค่ะ
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">
+            cancel
+          </button>
+          <button class="btn btn-success">buy</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="myModalH05">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">
+            มอบริมฝีปากแวววาวอิ่มน้ำ สีชัดเจนโดดเด่น พร้อมบำรุงความชุ่มชื้น
+          </h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row row-cols-1 row-cols-sm-2 g-4 mt-auto">
+          </div>
+          ใครที่เริ่มเบื่อลิปสติกเนื้อ Matte แล้วกำลังตามหาลิปสติกที่ให้ริมฝีปากเป็นประกายเงางามพร้อมช่วยบำรุงริมฝีปากในราคาย่อมเยา 
+          เราขอแนะนำลิปสติกไซซ์มินิรุ่นนี้ โดยเนื้อลิปสติกจะเป็นแบบ Shine ที่มีความนุ่มลื่น ทาง่าย ให้เรียวปากดูชุ่มฉ่ำ อิ่มน้ำ มีเฉดสีสวย ๆ 
+          ให้เลือกถึง 14 สี อีกทั้งเม็ดสียังแน่นชัดโดดเด่น แต่อาจจะกลบสีปากได้ไม่ค่อยมิดเท่าไรนักหากไม่ทาซ้ำหลาย ๆ ครั้ง นอกจากนี้ ยังมีข้อเสียคือ 
+          เนื้อลิปหลุดง่าย ไม่ค่อยติดทน ซึ่งเป็นปกติของเนื้อลิปแบบ Shine อยู่แล้วค่ะ
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">
+            cancel
+          </button>
+          <button class="btn btn-success">buy</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="myModalH06">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">
+            เนื้อ Matte สีสดชัดติดทน พร้อมบำรุงริมฝีปากให้ชุ่มชื้นสุขภาพดี
+          </h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row row-cols-1 row-cols-sm-2 g-4 mt-auto">
+          </div>
+          เนรมิตริมฝีปากอวบอิ่มด้วยลิปสติกที่มีเนื้อครีมเนียนนุ่ม บางเบาสบายปาก อีกทั้งยังเม็ดสีแน่น ให้สีลิปสดใสชัดเจน 
+          แม้จะให้ Finish Look แบบ Matte แต่ไม่ทำให้ปากแห้งแตกหรือตกร่องปากเหมือนลิปสติกทั่วไป พร้อมบำรุงริมฝีปากให้ชุ่มชื้นยาวนานด้วย 
+          Shea Butter ที่สำคัญคือ มีสีให้เลือกใช้หลากหลายถึง 15 สี มั่นใจได้เลยว่าจะต้องมีสีที่เข้ากับสไตล์ของแต่ละคนอย่างแน่นอน 
+          และด้วยคุณสมบัติที่ครบครันในราคาเป็นมิตรแบบนี้ จึงทำให้เป็นอีกหนึ่งลิปสติกยอดนิยมจาก Maybelline เลยค่ะ
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">
+            cancel
+          </button>
+          <button class="btn btn-success">buy</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-dark">
+    <div class="container py-5">
+      <div class="row py-4">
+        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0"><img src="images\Web-Bootstrap\logo.png" alt=""
+            width="180" class="mb-3">
+          <ul class="list-inline mt-4">
+            <li class="list-inline-item"><a href="#" target="_blank" title="twitter"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li class="list-inline-item"><a href="#" target="_blank" title="facebook"><i class="fa fa-facebook"></i></a>
+            </li>
+            <li class="list-inline-item"><a href="#" target="_blank" title="instagram"><i
+                  class="fa fa-instagram"></i></a></li>
+            <li class="list-inline-item"><a href="#" target="_blank" title="pinterest"><i
+                  class="fa fa-pinterest"></i></a></li>
+            <li class="list-inline-item"><a href="#" target="_blank" title="vimeo"><i class="fa fa-vimeo"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+          <h6 class="text-uppercase font-weight-bold mb-4">Shop</h6>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2"><a href="#" class="text-muted">Stores</a></li>
+            <li class="mb-2"><a href="#" class="text-muted">Our Blog</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+          <h6 class="text-uppercase font-weight-bold mb-4">contacts</h6>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2"><a href="#" class="text-muted">FB:-----</a></li>
+            <li class="mb-2"><a href="#" class="text-muted">IG:-----</a></li>
+            <li class="mb-2"><a href="#" class="text-muted">Tel:-----</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+</body>
+</html>

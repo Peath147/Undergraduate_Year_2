@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link  href="Color.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <h1>โปรแกรมอัปโหลดไฟล์</h1>
+    <fieldset>
+        <legend>โปรแกรมอัปโหลดไฟล์</legend>
+        <p>
+            <label>จำนวนไฟล์ที่อัปโหลด</label><br>
+            <select name="money">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+        </select>
+        <form action="upfiles.php" method="post"
+            enctype="multipart/form-data">
+            <label >ไฟล์อัปโหลด:</label>
+            <input type="file" name="profile">
+            <p><input type="submit"
+            value="อัปโหลด"></p>
+            </form>
+        </p>
+    </fieldset>
+
+    <div id="b1">
+        <p>
+          ชื่อ <span id="s1">สุรดิษ </span> นามสกุล <span id="s1">หิรัญญานนท์ </span>
+        </p>
+        <p>
+          เลขประจำตัว <span id="s1">63122201023</span>
+        </p>
+        <p>สาขาวิชา  วิทยการคอมพิวเตอร์</p>
+        <p>มหาวิทยาลัยราชภัฏสวนสุนันทา</p>
+      </div>
+      
+</body>
+</html>
