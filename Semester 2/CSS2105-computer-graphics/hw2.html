@@ -1,0 +1,57 @@
+<html>
+    <script async src='/cdn-cgi/bm/cv/669835187/api.js'></script><body>
+        <canvas id = "myCanvas" width="800" height="600" style="border: 3px solid #ffffff;">
+        </canvas>
+        <script>
+            var c=document.getElementById("myCanvas");
+            var ctx=c.getContext("2d");
+
+
+
+            var grd =ctx.createRadialGradient(400,300,1,400,300,400);
+            grd.addColorStop(0,"#adf33c");
+            grd.addColorStop(1,"blue");
+
+
+            //fill gradient
+            ctx.fillStyle = grd;
+            ctx.fillRect(0,0,800,600);
+
+            //draw polar
+            ctx.lineWidth =3;
+            ctx.strokeStyle="#000000";
+
+            var centerX = 400;
+            var centerY = 300;
+            var lastX = centerX;
+            var lastY = centerY;
+
+            ctx.beginPath();
+            
+            for (var i=0; i<=360; i+=0.1){
+                var theta = (i*Math.PI)/8100 // แปลง องศา เป็น เรเดียน
+                // var r =1* i;
+                var r = 400*(Math.sin(5*theta));
+                var x = r*Math.cos(450*theta);//แปลงจากสมการ polar ให้เป็นพิกัด x,y
+                var y = r*Math.sin(450*theta);
+
+                var ptX = centerX + x; //ย้ายแกน
+                var ptY = centerY + y;
+
+                if(i==0){
+                    lastX =ptX;
+                    lastY =ptY
+                }
+
+
+                ctx.moveTo(lastX,lastY);
+                ctx.lineTo(ptX,ptY);
+
+                lastX = ptX;
+                lastY = ptY;
+
+        }
+        ctx.stroke();
+        </script>
+    <script type="text/javascript">(function(){window['__CF$cv$params']={r:'6d94b90df9e010ce',m:'VdkyE2bWwBnnCF8g9Tv3JY1U_aCGINSkoNSJMx4VUVg-1644154119-0-AcDoAe+yMsqq8xLIJWGiZX5iLiZcV8vGJMKUO+lPtUJ4HVKIigAKGe6UjKxt/+mHoFxGn5JyZxpOD5O7N+FT4cOyBhjxVH3TfrWsUjNGHQqplb4mf/du07j5H7BbXKYhmnMQdeWArGf6faBKGXGQtLkul15aQC45p1EobADi0fRJLfV8igduDr78VZFEwJzHIQ==',s:[0x604d6caddb,0x25bf0911aa],}})();</script></body>
+</html>
