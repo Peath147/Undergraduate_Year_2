@@ -1,0 +1,50 @@
+<html>
+<body>
+
+    <canvas id="myCanvas" width="800" height="600" style="border: 3px solid #ffffff;">
+    </canvas>
+    <script>
+
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+
+        var grd = ctx.createRadialGradient(400, 300, 1, 400, 300, 400);
+        grd.addColorStop(0, "#0000FF");
+        grd.addColorStop(1, "#000000");
+
+        //fill gradient
+        ctx.fillStyle = grd;
+        ctx.fillRect(0, 0, 800, 600);
+
+        //draw polar
+        ctx.lineWidth = "2";
+        ctx.strokeStyle = "#FFFF00";
+
+        var centerY = 300;
+
+        ctx.beginPath();
+        ctx.moveTo(0,centerY);
+
+        for (var x = 0; x < 800; x += 1){
+            var theta = (x*Math.PI)/180;
+            var dy = 100*Math.sin(2*theta); //กำหนดเส้นโค้งตาม กราฟ sin
+            var y = centerY + dy;
+            
+            ctx.lineTo(x, y);
+        }
+
+        ctx.moveTo(0,centerY);
+        for (var x = 0; x < 800; x += 1){
+            var theta = (x*Math.PI)/180;
+            var dy = 100*Math.sin(2*theta); //กำหนดเส้นโค้งตาม กราฟ sin
+            var y = centerY - dy;
+            
+            ctx.lineTo(x, y);
+        }
+
+        ctx.stroke();
+
+    </script>
+
+</body>
+</html>
