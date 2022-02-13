@@ -92,13 +92,18 @@ def depthFirstSearch(problem):
     while not states.isEmpty() and not problem.isGoalState(c):
         state, actions = states.pop()
         exploredState.append(state)
+        print("state     : ",state)
         successor = problem.getSuccessors(state)
+        print("successor : ",successor)
         for i in successor:
+            print("i[0]",i[0])
+            print("i[1]",i[1])
             coordinates = i[0]
             if not coordinates in exploredState:
                 c = i[0]
                 direction = i[1]
                 states.push((coordinates, actions + [direction]))
+                print("actions+[direction]",actions+[direction])
     return actions + [direction]
     util.raiseNotDefined()
 
@@ -113,7 +118,9 @@ def breadthFirstSearch(problem):
         state, action = states.pop()
         if problem.isGoalState(state):
             return action
+        print("state : ",state)
         successor = problem.getSuccessors(state)
+        print("successor : ",successor)
         for i in successor:
             coordinates = i[0]
             if not coordinates in exploredState:
