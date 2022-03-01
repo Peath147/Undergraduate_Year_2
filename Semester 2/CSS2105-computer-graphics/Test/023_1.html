@@ -1,0 +1,56 @@
+<html>
+    <body>
+
+        <canvas id="myCanvas" width="800" height="600" style="border: 3px solid #ffffff;"></canvas>
+
+        <script>
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+
+            var grd = ctx.createRadialGradient(400, 300, 1, 400, 300, 400);
+            grd.addColorStop(0, "#000000");
+            grd.addColorStop(1, "#00EEA2");
+
+            ctx.fillStyle = grd;
+            ctx.fillRect(0, 0, 800, 600);
+
+            ctx.beginPath();
+            ctx.arc(400, 300, 250, 0, 2 * Math.PI);
+            ctx.fillStyle = "Yellow";
+            ctx.fill();
+            ctx.stroke();
+
+            //EYE-left
+            ctx.beginPath();
+            ctx.arc(290, 200, 50, 0, 2 * Math.PI);
+            ctx.fillStyle = "#FFFFFF";
+            ctx.fill();
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.arc(290, 200, 20, 0, 2 * Math.PI);
+            ctx.fillStyle = "black";
+            ctx.fill();
+            ctx.stroke();
+
+            //EYE-right
+            ctx.beginPath();
+            ctx.arc(510, 200, 50, 0, 2 * Math.PI);
+            ctx.fillStyle = "#FFFFFF";
+            ctx.fill();
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.arc(510, 200, 20, 0, 2 * Math.PI);
+            ctx.fillStyle = "black";
+            ctx.fill();
+            ctx.stroke();
+
+            //mouse
+            ctx.beginPath();
+            ctx.arc(380, 250, 200, 0, 0.7 * Math.PI);
+
+            ctx.stroke();
+        </script>
+    </body>
+</html>

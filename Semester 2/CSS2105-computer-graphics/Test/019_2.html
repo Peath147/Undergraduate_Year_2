@@ -1,0 +1,44 @@
+<html>
+    <body>
+        <canvas id = "myCanvas" width="800" height="600" style="border: 3px solid #ffffff;">
+        </canvas>
+        <script>
+            var c=document.getElementById("myCanvas");
+            var ctx=c.getContext("2d");
+
+            var grd =ctx.createRadialGradient(400,300,1,400,300,400);
+            grd.addColorStop(0,"yellow");
+            grd.addColorStop(1,"#250020");
+
+            ctx.fillStyle = grd;
+            ctx.fillRect(0,0,800,600);
+
+            ctx.lineWidth =3;
+            ctx.strokeStyle="#000000";
+
+            var centerX = 400;
+            var centerY = 300;
+            var lastX = centerX;
+            var lastY = centerY;
+
+            ctx.beginPath();
+            
+            for (var i=0; i<=360; i+=1){
+                var theta = (i*Math.PI)/180 
+                var r =100*(Math.sin(2*theta) + Math.cos(180*theta));
+                var x = r*Math.cos(theta);
+                var y = r*Math.sin(theta);
+
+                var ptX = centerX + x; 
+                var ptY = centerY + y;
+
+                ctx.moveTo(lastX,lastY);
+                ctx.lineTo(ptX,ptY);
+
+                lastX = ptX;
+                lastY = ptY;
+        }
+        ctx.stroke();
+        </script>
+    </body>
+</html>

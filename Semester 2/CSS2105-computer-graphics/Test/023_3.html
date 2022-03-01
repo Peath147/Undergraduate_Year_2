@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+
+<body> <canvas id="newCanvas" width="800" height="600"></canvas>
+    <script> 
+        var canvas = document.getElementById('newCanvas'); 
+        var ctx = canvas.getContext('2d'); 
+
+        ctx.beginPath();
+        ctx.moveTo(200,300);
+        ctx.lineTo(600,300);
+        ctx.lineTo(600,200);
+        ctx.lineTo(200,200);
+        ctx.lineTo(200,300);
+        ctx.fillStyle = "red";
+        ctx.fill();
+        ctx.strokeStyle = "red";
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(200,400);
+        ctx.lineTo(600,400);
+        ctx.lineTo(600,300);
+        ctx.lineTo(200,300);
+        ctx.lineTo(200,400);
+        ctx.fillStyle = "green";
+        ctx.fill();
+        ctx.strokeStyle = "green";
+        ctx.stroke();
+
+        drawStar(400,300,5,50,25,'yellow','yellow',2);
+
+
+
+
+
+
+
+    function drawStar(centerX, centerY, points, outer, inner, fill, stroke, line) {
+        ctx.beginPath();
+        for (var i=0; i < 2*points+1; i++) {
+            var r = (i%2 == 0)? outer : inner;
+            var a = Math.PI * i/points;
+
+            if (i == 0) {
+                ctx.moveTo(centerX + r*Math.sin(a + 1 * Math.PI), centerY + r*Math.cos(a - 1 * Math.PI));
+            }
+            ctx.lineTo(centerX + r*Math.sin(a + 1 * Math.PI), centerY + r*Math.cos(a - 1 * Math.PI));
+        };
+           ctx.closePath();
+           ctx.fillStyle=fill;
+           ctx.fill();
+           ctx.strokeStyle=stroke;
+           ctx.lineWidth=line;
+           ctx.stroke()
+    }
+    </script>
+</body>
+
+</html>
