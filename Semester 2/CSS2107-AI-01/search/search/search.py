@@ -79,31 +79,32 @@ def myLayout(problem):
     n = Directions.NORTH
     return  [s, w, s, w, w, w, w, w, n, w, n]
 
-
-
 def depthFirstSearch(problem):
-    start = problem.getStartState()
-    c = problem.getStartState()
-    exploredState = []
-    exploredState.append(start)
+    start = problem.getStartState() 
+    c = problem.getStartState() 
+    exploredState = [] 
+    exploredState.append(start)  
     states = util.Stack()
-    stateTuple = (start, [])
-    states.push(stateTuple)
-    while not states.isEmpty() and not problem.isGoalState(c):
-        state, actions = states.pop()
-        exploredState.append(state)
+    stateTuple = (start, []) 
+    states.push(stateTuple) 
+    print("states : ", stateTuple) 
+    print(problem.isGoalState(c))
+    while not states.isEmpty() and not problem.isGoalState(c): 
+        state, actions = states.pop() 
+        exploredState.append(state) 
         print("state     : ",state)
         successor = problem.getSuccessors(state)
         print("successor : ",successor)
-        for i in successor:
-            print("i[0]",i[0])
-            print("i[1]",i[1])
-            coordinates = i[0]
-            if not coordinates in exploredState:
-                c = i[0]
-                direction = i[1]
-                states.push((coordinates, actions + [direction]))
-                print("actions+[direction]",actions+[direction])
+        for i in successor: 
+            print("i[0]",i[0]) 
+            print("i[1]",i[1]) 
+            coordinates = i[0] 
+            if not coordinates in exploredState: 
+                c = i[0] 
+                direction = i[1] 
+                states.push((coordinates, actions + [direction]))  
+                print("action : ",actions)
+                print("direction : ",[direction])
     return actions + [direction]
     util.raiseNotDefined()
 
@@ -141,7 +142,7 @@ def uniformCostSearch(problem):
     
     startState = problem.getStartState()
     startNode = (startState, [], 0) #(state, action, cost)
-    
+
     frontier.push(startNode, 0)
     
     while not frontier.isEmpty():
@@ -164,7 +165,7 @@ def uniformCostSearch(problem):
                     newNode = (succState, newAction, newCost)
 
                     frontier.update(newNode, newCost)
-
+                    print("frontier.update : ",newNode," + ",newCost)
     return actions
     util.raiseNotDefined()
 

@@ -1,0 +1,29 @@
+def depthFirstSearch(problem):
+    start = problem.getStartState()  #นำพิกัดเริ่มต้น ใส่ใน start
+    c = problem.getStartState()  #นำพิกัดเริ่มต้น ใส่ใน C
+    exploredState = []  #สร้าง list ขึ้นมาเก็บค่าของ state ที่เราเช็คไปแล้ว
+    exploredState.append(start)  #ใส่ค่า start ลงไป
+    states = util.Stack() #สร้างตัวแปร states ที่เป็น stack
+    stateTuple = (start, []) #ใส่ค่า states แรก และ action ว่าง ลงใน stateTuple
+    states.push(stateTuple) #นำ statesTuple pushลงใน states  เช่น เก็บค่าพิกัด (34, 16) และค่า action ซึ่งค่าเริ่มต้นเป็น [] 
+    print("states : ", stateTuple) 
+    print(problem.isGoalState(c))
+    while not states.isEmpty() and not problem.isGoalState(c): #วนลูปเมื่อ states ไม่ใช่ค่าว่าง และ ค่า c ไม่ใช่จุดเส้นชัย
+        state, actions = states.pop() #นำค่าstates ออกมาใส่ state และ actions โดน state จะเก็บพิกัด และ actions จะเก็บการกระทำเช่น north south west east
+        exploredState.append(state) #นำค่า state เข้าไปยัง list ของเส้นทางที่เราเช็คไปแล้ว
+        #print("state     : ",state)
+        successor = problem.getSuccessors(state) #problem.getSuccessors(state) คือการเอาพิกัดและaction ที่พิกัดตอนนี้สามารถเดินไปได้มาเก็บใน successors
+        #print("successor : ",successor)
+        for i in successor: #ลูป i ใน successor
+            #print("i[0]",i[0]) #i[0] จะเก็บค่า state
+            #print("i[1]",i[1]) #i[1] จะเก้บค่า action
+            coordinates = i[0] #นำค่าพิกัดใส่ยัง coordinates
+            if not coordinates in exploredState: #ถ้าค่าพิกัดไม่อยู่ในstateที่เราเคยเช็ค
+                c = i[0] #ใส่พิกัดลงในค่า C
+                direction = i[1] #นำ action หรือทิศทางใส่ใน direction
+                states.push((coordinates, actions + [direction]))  #actions + [direction] คือนำค่า direction ไปเพิ่มในค่า actions 
+                                                                   #และนำค่าพิกัดและaction ไปใส่ใน states
+                print("action : ",actions)
+                print("direction : ",[direction])
+    return actions + [direction]
+    util.raiseNotDefined()
